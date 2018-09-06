@@ -59,7 +59,7 @@
 #pragma mark - UITableView Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //[tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self performSegueWithIdentifier:@"UserVehiclesSegueID" sender:self];
 }
 

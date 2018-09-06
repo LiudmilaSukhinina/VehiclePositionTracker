@@ -152,7 +152,7 @@ const NSTimeInterval kUpdateMapTimeSec = 60;
         if (error == nil) {
             for (VehicleMapMarker *marker in weakSelf.dataSource.markers) {
                 UIImageView *markerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-                markerImageView.image = [UIImage imageNamed:@"car_icon"];
+                markerImageView.image = [UIImage imageNamed:@"vehicle_icon"];
                 markerImageView.contentMode = UIViewContentModeScaleAspectFit;
                 marker.iconView = markerImageView;
                 

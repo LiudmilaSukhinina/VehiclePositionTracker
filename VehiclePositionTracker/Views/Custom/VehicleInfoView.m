@@ -39,7 +39,9 @@
     
     self.layer.cornerRadius = 5.f;
     self.clipsToBounds = YES;
-    
+    //self.addressLabel.backgroundColor = [UIColor redColor];
+    self.addressLabel.textColor = [UIColor blackColor];
+    self.addressLabel.numberOfLines = 1;
     self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.height / 2;
     self.avatarImageView.clipsToBounds = YES;
 }
@@ -56,11 +58,11 @@
     self.colorView.backgroundColor = [UIColor colorFromHexString:vehicle.color];
     
     NSURL *imageUrl = [NSURL URLWithString:vehicle.foto];
-    [self.avatarImageView hnk_setImageFromURL:imageUrl placeholder:[UIImage imageNamed:@"car_icon"]];
+    [self.avatarImageView hnk_setImageFromURL:imageUrl placeholder:[UIImage imageNamed:@"vehicle_icon"]];
 }
 
 - (void)setAddress:(NSString *)address {
-    self.addressLabel.text = address;
+    self.addressLabel.text = address;   
 }
 
 @end

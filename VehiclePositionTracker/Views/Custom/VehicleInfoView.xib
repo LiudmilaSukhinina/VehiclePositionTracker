@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="55"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pvb-ie-aMQ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vehicle_icon" translatesAutoresizingMaskIntoConstraints="NO" id="pvb-ie-aMQ">
                     <rect key="frame" x="10" y="8" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="DdQ-AQ-TG3"/>
@@ -32,13 +32,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="999" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCP-LH-0Vb">
-                    <rect key="frame" x="58" y="28" width="0.0" height="19"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="999" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCP-LH-0Vb">
+                    <rect key="frame" x="58" y="28" width="200" height="19"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="200" id="697-lP-x04"/>
                         <constraint firstAttribute="height" priority="750" constant="19" id="UcN-nq-oAb"/>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="230" id="dyC-qJ-7di"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -77,4 +77,7 @@
             <point key="canvasLocation" x="-5" y="-93.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="vehicle_icon" width="256" height="256"/>
+    </resources>
 </document>
