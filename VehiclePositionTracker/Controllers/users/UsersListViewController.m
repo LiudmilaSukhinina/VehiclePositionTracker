@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tblUsers;
 @property (nonatomic, strong) UsersListDataSource *dataSource;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
@@ -29,13 +30,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    //load users data from datasource
-    
-    __strong typeof(self) weakSelf = self;
+
+    self.tblUsers.tableFooterView = [UIView new];
+
+    UIRefreshControl *refresh = [UIRefreshControl new];
+    [refresh addTarget:self action:@selector(refreshActivated) forControlEvents:UIControlEventValueChanged];
+    [self.tblUsers addSubview: refresh];
+    self.refreshControl = refresh;
+
+    [self updateData];
+}
+
+- (void)updateData {
+    __weak typeof(self) weakSelf = self;
     [self.dataSource loadOwnersWithCallback:^(NSError * _Nullable error) {
         if(!error) {
             [weakSelf.tblUsers reloadData];
         }
     }];
+}
+
+- (void)refreshActivated {
+    [_refreshControl endRefreshing];
+    [self updateData];
 }
 
 #pragma mark - UITableView DataSource

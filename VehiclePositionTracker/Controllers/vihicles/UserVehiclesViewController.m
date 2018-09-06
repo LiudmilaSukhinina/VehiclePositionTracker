@@ -28,10 +28,6 @@ const NSTimeInterval kUpdateMapTimeSec = 60;
 
 @implementation UserVehiclesViewController
 
-//- (void)loadView {
-//    [super loadView];
-//    //self.dataSource = [UserVehiclesDataSource new];
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -112,10 +108,8 @@ const NSTimeInterval kUpdateMapTimeSec = 60;
                 [view layoutIfNeeded];
             }
         }];
-        
         return view;
     }
-    
     return nil;
 }
 
@@ -149,7 +143,7 @@ const NSTimeInterval kUpdateMapTimeSec = 60;
 - (void)updateMarkers {
     __weak typeof(self) weakSelf = self;
     [self.dataSource loadPositionsWithCallback:^(NSError *error) {
-        if (error == nil) {
+//        if (error == nil) {
             for (VehicleMapMarker *marker in weakSelf.dataSource.markers) {
                 UIImageView *markerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
                 markerImageView.image = [UIImage imageNamed:@"vehicle_icon"];
@@ -157,9 +151,14 @@ const NSTimeInterval kUpdateMapTimeSec = 60;
                 marker.iconView = markerImageView;
                 
                 marker.infoWindowAnchor = CGPointMake(0.44f, 0.2f);
+                marker.tracksInfoWindowChanges = YES;
                 marker.map = weakSelf.vwMap;
             }
-        }
+            VehicleMapMarker *marker = nil;
+            if ((marker =[weakSelf.dataSource.markers firstObject])) {
+                [weakSelf.vwMap setCamera:[GMSCameraPosition cameraWithTarget:marker.position zoom:13.0] ];
+            }
+//        }
     }];
 }
 
