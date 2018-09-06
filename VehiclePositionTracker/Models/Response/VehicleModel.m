@@ -25,7 +25,13 @@
         _vin = dictionary[@"vin"];
         _model = dictionary[@"model"];
         _foto = dictionary[@"foto"];
-        _year = [dictionary[@"year"] integerValue];
+        
+        if (dictionary[@"year"] != (id)[NSNull null])
+        {
+            _year = [dictionary[@"year"] integerValue];
+        } else {
+            _year = 0;
+        }
     }
     
     return self;

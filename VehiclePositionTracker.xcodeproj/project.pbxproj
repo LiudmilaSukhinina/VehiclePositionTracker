@@ -50,6 +50,7 @@
 		02248B4F214028F500F325C8 /* VehicleInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02248B4E214028F500F325C8 /* VehicleInfoView.m */; };
 		02248B512140299E00F325C8 /* VehicleInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02248B502140299E00F325C8 /* VehicleInfoView.xib */; };
 		02248B5B2140321300F325C8 /* UIColor+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 02248B5A2140321300F325C8 /* UIColor+Additionals.m */; };
+		02746DB121411E4600C82C5E /* UIAlertController+Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 02746DB021411E4600C82C5E /* UIAlertController+Errors.m */; };
 		E634D5374D25D937088C068F /* libPods-VehiclePositionTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 241153570A1EBC767E00AD81 /* libPods-VehiclePositionTracker.a */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,8 @@
 		02248B502140299E00F325C8 /* VehicleInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleInfoView.xib; sourceTree = "<group>"; };
 		02248B592140321300F325C8 /* UIColor+Additionals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additionals.h"; sourceTree = "<group>"; };
 		02248B5A2140321300F325C8 /* UIColor+Additionals.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additionals.m"; sourceTree = "<group>"; };
+		02746DAF21411E4600C82C5E /* UIAlertController+Errors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Errors.h"; sourceTree = "<group>"; };
+		02746DB021411E4600C82C5E /* UIAlertController+Errors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Errors.m"; sourceTree = "<group>"; };
 		241153570A1EBC767E00AD81 /* libPods-VehiclePositionTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VehiclePositionTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C0D29B4F05EFF2CC101615 /* Pods-VehiclePositionTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehiclePositionTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VehiclePositionTracker/Pods-VehiclePositionTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		E029B8A29800A6971207D586 /* Pods-VehiclePositionTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehiclePositionTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-VehiclePositionTracker/Pods-VehiclePositionTracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -359,6 +362,8 @@
 			children = (
 				02248B592140321300F325C8 /* UIColor+Additionals.h */,
 				02248B5A2140321300F325C8 /* UIColor+Additionals.m */,
+				02746DAF21411E4600C82C5E /* UIAlertController+Errors.h */,
+				02746DB021411E4600C82C5E /* UIAlertController+Errors.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02248AFE213FBF9B00F325C8 /* ViewController.m in Sources */,
+				02746DB121411E4600C82C5E /* UIAlertController+Errors.m in Sources */,
 				02248B24213FE5FE00F325C8 /* PositionModel.m in Sources */,
 				02248B42214016A000F325C8 /* Vehicle.m in Sources */,
 				02248B4F214028F500F325C8 /* VehicleInfoView.m in Sources */,

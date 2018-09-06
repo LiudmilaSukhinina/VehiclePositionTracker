@@ -11,6 +11,7 @@
 #import "OwnerCell.h"
 #import "UserVehiclesViewController.h"
 #import "UserVehiclesDataSource.h"
+#import "UIAlertController+Errors.h"
 
 @interface UsersListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -46,6 +47,8 @@
     [self.dataSource loadOwnersWithCallback:^(NSError * _Nullable error) {
         if(!error) {
             [weakSelf.tblUsers reloadData];
+        } else {
+           [UIAlertController showAlertInController:weakSelf withTitle:@"Some error has occurred" message:error.localizedDescription cancelTitle:@"Ok" completion:nil];
         }
     }];
 }
