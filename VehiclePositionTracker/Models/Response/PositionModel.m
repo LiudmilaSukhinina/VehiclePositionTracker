@@ -20,8 +20,20 @@
     
     if (self) {
         _vehicleId = vehicleId;
-        self.longitude = [dictionary[@"lon"] doubleValue];
-        self.latitude = [dictionary[@"lat"] doubleValue];
+ 
+        if (dictionary[@"lon"] != (id)[NSNull null])
+        {
+           self.longitude = [dictionary[@"lon"] doubleValue];
+        } else {
+            self.longitude = 0.0;
+        }
+        
+        if (dictionary[@"lat"]  != (id)[NSNull null])
+        {
+           self.latitude = [dictionary[@"lat"] doubleValue];
+        } else {
+            self.latitude = 0.0;
+        }
     }
     
     return self;
